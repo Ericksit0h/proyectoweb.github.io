@@ -1,0 +1,30 @@
+/* Transición suave para el encabezado */
+.encabezado {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Clase que se añade con JS cuando haces scroll */
+.encabezado.scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* Blanco ligeramente transparente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+/* Clases para las animaciones de aparición */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(40px); /* Empieza 40px más abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+/* Efecto en cascada para las tarjetas (hace que aparezcan una tras otra) */
+.tarjeta:nth-child(1), .quienes-tarjeta:nth-child(1), .servicio-card:nth-child(1) { transition-delay: 0.1s; }
+.tarjeta:nth-child(2), .quienes-tarjeta:nth-child(2), .servicio-card:nth-child(2) { transition-delay: 0.2s; }
+.tarjeta:nth-child(3), .quienes-tarjeta:nth-child(3), .servicio-card:nth-child(3) { transition-delay: 0.3s; }
+.tarjeta:nth-child(4), .servicio-card:nth-child(4) { transition-delay: 0.4s; }
+.servicio-card:nth-child(5) { transition-delay: 0.5s; }
+.servicio-card:nth-child(6) { transition-delay: 0.6s; }

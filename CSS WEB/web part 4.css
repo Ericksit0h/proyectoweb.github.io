@@ -1,0 +1,105 @@
+        .proyectos-contenido {
+            padding: 70px 8%;
+            background: #f5f7fa;
+            color: #172033;
+        }
+
+        .proyectos-intro {
+            max-width: 850px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .proyectos-intro .subtitulo-proyectos {
+            color: #00b8d9;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: .85rem;
+            margin-bottom: 10px;
+        }
+
+        .proyectos-intro h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 14px;
+            color: #101827;
+        }
+
+        .proyectos-intro p {
+            color: #5b6678;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* TARJETAS DE PROYECTOS */
+        .rejilla-proyectos {
+            max-width: 1150px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(260px, 1fr)
+            );
+            gap: 24px;
+        }
+
+        .tarjeta-proyecto {
+            background: #fff;
+            border: 1px solid #e1e7ef;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 8px 24px rgba(15, 30, 55, .07);
+            transition: transform .25s ease,
+                        box-shadow .25s ease;
+        }
+
+        .tarjeta-proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(15, 30, 55, .12);
+        }
+
+        .numero-proyecto {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            background: #e4faff;
+            color: #009fbd;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .tarjeta-proyecto h3 {
+            color: #152238;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta-proyecto p {
+            color: #5b6678;
+            line-height: 1.7;
+        }
+
+        .estado-proyecto {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #edf7f9;
+            color: #087f95;
+            font-size: .8rem;
+            font-weight: 700;
+        }
+
+        /* DISEÑO PARA CELULARES */
+        @media (max-width: 600px) {
+            .proyectos-contenido {
+                padding: 48px 6%;
+            }
+
+            .tarjeta-proyecto {
+                padding: 22px;
+            }
+        }

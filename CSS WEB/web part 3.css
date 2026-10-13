@@ -1,0 +1,233 @@
+        .servicios-portada {
+            position: relative;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 70px max(7%, calc((100% - 1180px) / 2));
+            color: #fff;
+            background:
+                radial-gradient(
+                    circle at 82% 24%,
+                    rgba(45, 151, 220, .3),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    120deg,
+                    #071426 0%,
+                    #0b2440 58%,
+                    #12395d 100%
+                );
+        }
+
+        .servicios-portada::after {
+            content: "";
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid rgba(100, 190, 255, .24);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 35px rgba(100, 190, 255, .035),
+                0 0 0 75px rgba(100, 190, 255, .025);
+            pointer-events: none;
+        }
+
+        .servicios-intro {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .servicios-etiqueta {
+            margin-bottom: 14px;
+            color: #67c8ff;
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+        }
+
+        .servicios-portada h1 {
+            margin: 0 0 18px;
+            color: #fff;
+            font-size: clamp(2.2rem, 5vw, 3.7rem);
+            line-height: 1.12;
+        }
+
+        .servicios-portada h1 span {
+            color: #61c5ff;
+        }
+
+        .servicios-descripcion {
+            max-width: 660px;
+            color: #d4e3f2;
+            font-size: 1.05rem;
+            line-height: 1.85;
+        }
+
+        /* CONTENIDO */
+        .servicios-contenido {
+            padding: 72px 7%;
+            background: #f5f8fc;
+        }
+
+        .servicios-contenedor {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .servicios-titulo {
+            margin-bottom: 38px;
+            text-align: center;
+        }
+
+        .servicios-titulo .mini-titulo {
+            margin-bottom: 10px;
+            color: #178ac4;
+            font-size: .8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .servicios-titulo h2 {
+            margin-bottom: 14px;
+            color: #0b1d33;
+            font-size: clamp(1.7rem, 3vw, 2.5rem);
+        }
+
+        .servicios-titulo > p:last-child {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #607086;
+            line-height: 1.8;
+        }
+
+        /* TARJETAS */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .servicio-card {
+            padding: 28px 26px;
+            background: #fff;
+            border: 1px solid #e1eaf3;
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(15, 42, 71, .06);
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 38px rgba(15, 42, 71, .11);
+        }
+
+        .servicio-numero {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            margin-bottom: 20px;
+            color: #087fb8;
+            background: #e7f5ff;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
+        .servicio-card h3 {
+            margin-bottom: 12px;
+            color: #102640;
+            font-size: 1.18rem;
+        }
+
+        .servicio-card p {
+            color: #617186;
+            line-height: 1.75;
+        }
+
+        /* SECCIÓN FINAL */
+        .servicios-llamada {
+            margin-top: 35px;
+            padding: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            color: #fff;
+            border-radius: 16px;
+            background: linear-gradient(
+                115deg,
+                #0a1b30,
+                #123e63
+            );
+        }
+
+        .servicios-llamada h2 {
+            margin-bottom: 8px;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .servicios-llamada p {
+            max-width: 760px;
+            color: #d5e5f4;
+            line-height: 1.7;
+        }
+
+        .servicios-llamada a {
+            flex-shrink: 0;
+            display: inline-block;
+            padding: 13px 21px;
+            border-radius: 7px;
+            color: #06213a;
+            background: #6bcaff;
+            text-decoration: none;
+            font-weight: 800;
+            transition: background .2s ease;
+        }
+
+        .servicios-llamada a:hover {
+            background: #fff;
+        }
+
+        .pie-pagina {
+            text-align: center;
+        }
+
+        /* TABLET */
+        @media (max-width: 850px) {
+            .servicios-portada {
+                padding: 60px 7%;
+            }
+
+            .servicios-portada::after {
+                right: -170px;
+                opacity: .6;
+            }
+
+            .servicios-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .servicios-llamada {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        /* CELULARES */
+        @media (max-width: 600px) {
+            .servicios-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
